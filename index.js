@@ -3,6 +3,29 @@ function identity(x) {
     return x;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //2 Write two binary functions, add and mul, that take taks two numbers and return their sum and product 
 function add(x, y) {
     return x + y;
@@ -13,12 +36,63 @@ function mul(x, y) {
     return x * y;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 3.Write a function that takes an argument and returns a function that returns that argument 
 function identifyf(x) {
     return function () {
         return x;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //4 Write a function that adds from two invocation
 function addf(x) {
@@ -40,6 +114,31 @@ function applyf(binaryf) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //6 write a function that takes a 
 //function and an argument and returns a function that can supply a second argument
 
@@ -49,6 +148,44 @@ function curry(func, x) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //7.   Without writing any new function show 3 ways to write the following inc function
 
 //inc(7) // 8
@@ -57,6 +194,27 @@ function curry(func, x) {
 var inc_1 = addf(1);
 var inc_2 = curry(add, 1);
 var inc_3 = applyf(add)(1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //8  Write methodize, a function that converts a binary function to a method.   
 
@@ -79,6 +237,33 @@ function demethodize(func) {
     };
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //10 Write a 
 //function called "twice" that takes a binary function that passes its argument to the unary function twice.
 
@@ -87,6 +272,33 @@ function twice(func) {
         return func(x, x);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Write composeu that takes two unary functions and returns a unary function that calls them both
 //composeu(double, square)(3) // 36
@@ -106,6 +318,34 @@ function composeb(func1, func2) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Write a function that only allows another function to be called once
 //add_once(3,4) // 7
 //add_once(3,4) // throw
@@ -117,6 +357,33 @@ function once(func) {
         return myFunc.apply(this, arguments);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Write a factory function that returns two functions that implement an up/down counter
 
@@ -132,6 +399,27 @@ function counterf(a){
             }
      }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   function loop(){
