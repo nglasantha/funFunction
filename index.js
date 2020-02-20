@@ -26,6 +26,12 @@ function identity(x) {
 
 
 
+
+
+
+
+
+
 //2 Write two binary functions, add and mul, that take taks two numbers and return their sum and product 
 function add(x, y) {
     return x + y;
@@ -35,6 +41,18 @@ function add(x, y) {
 function mul(x, y) {
     return x * y;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,12 +112,95 @@ function identifyf(x) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //4 Write a function that adds from two invocation
 function addf(x) {
     return function (y) {
         return x + y;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 5 Write a function that takes a binary function and makes it callable with two invocations
 /* 
@@ -113,6 +214,48 @@ function applyf(binaryf) {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,6 +329,32 @@ function curry(func, x) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //7.   Without writing any new function show 3 ways to write the following inc function
 
 //inc(7) // 8
@@ -194,6 +363,53 @@ function curry(func, x) {
 var inc_1 = addf(1);
 var inc_2 = curry(add, 1);
 var inc_3 = applyf(add)(1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -227,6 +443,68 @@ function methodize(func) {
 Number.prototype.add = methodize(add);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * 9 Write demethodize, a function that converts a method into a 
  * binary function.
@@ -236,6 +514,57 @@ function demethodize(func) {
         return func.call(x, y);
     };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,6 +629,40 @@ function twice(func) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write composeu that takes two unary functions and returns a unary function that calls them both
 //composeu(double, square)(3) // 36
 
@@ -309,6 +672,80 @@ function composeu(func1, func2) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Write a function that takes two binary functions and returns a function that calls them both
 //composeb(add, mult)(3,2,5) // 25
 
@@ -317,6 +754,64 @@ function composeb(func1, func2) {
         return func2(z, func1(x, y))
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -385,6 +880,49 @@ function once(func) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write a factory function that returns two functions that implement an up/down counter
 
 function counterf(a){
@@ -422,6 +960,41 @@ function counterf(a){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function loop(){
       for(var i = 0; i < 10 ; i ++){
           setTimeout(function(){
@@ -429,6 +1002,75 @@ function counterf(a){
           },1000);
       }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
   function loop2(){
